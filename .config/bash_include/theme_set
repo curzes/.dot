@@ -1,0 +1,21 @@
+theme-set(){
+    WALLPAPER="feh --bg-scale ~\/.config\/wallpapers\/";
+    COLORSCHEME="#include \".config\/colors\/";
+
+    if [ -f ~/.config/colors/$1 ]; then
+       echo "$(sed "s/$WALLPAPER.*/$WALLPAPER$1.jpg/g" ~/.xinitrc)" > ~/.xinitrc;
+       echo "$(sed "s/$COLORSCHEME.*\"/$COLORSCHEME$1\"/g" ~/.Xresources)" > ~/.Xresources;
+
+        COLORFILE="$(grep "#include \".config\/colors\/.*\"" ~/.Xresources | cut -f 2 -d "\"")";
+        BORDER_A="$(cat $COLORFILE | grep borderA | cut -f 2 -d "#")";
+        BORDER_B="$(cat $COLORFILE | grep borderB | cut -f 2 -d "#")";
+        if [ ! -z $BORDER_A ]; then
+            echo "$(sed "s/myNormalBorderColor =.*/myNormalBorderColor = \"#$BORDER_A\"/g" ~/.xmonad/xmonad.hs)" > ~/.xmonad/xmonad.hs;
+        fi
+        if [ ! -z $BORDER_B ]; then
+            echo "$(sed "s/myFocusedBorderColor =.*/myFocusedBorderColor = \"#$BORDER_B\"/g" ~/.xmonad/xmonad.hs)"  > ~/.xmonad/xmonad.hs;
+        fi
+    else
+       echo "Theme does not exist."
+    fi
+}

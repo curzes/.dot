@@ -1,0 +1,5 @@
+myip(){ 
+	wget -qO- http://ip-api.com/json | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g';
+
+	VPN=$(wget -qO- http://ip-api.com/json)
+}

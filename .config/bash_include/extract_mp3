@@ -1,0 +1,8 @@
+extract-mp3() {
+	if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
+		echo "extract-mp3 <start point (00:01:20)> <end point 00:01:20> <path input> <path output>";
+	else
+		$(ffmpeg -ss $1 -to $2 -i $3 $4);
+		# $(ffmpeg -ss $1 -t $2 -acodec -i $3 $4);
+	fi
+}

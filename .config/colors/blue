@@ -1,0 +1,27 @@
+URxvt.transparent: true
+URxvt.shading: 10
+
+*.foreground:   #9BBBC6
+*.background:   #1C1C23
+*.cursorColor:  #1C1C23
+*.colorUL:      #1E828C
+
+*.borderA: #1c1c23
+*.borderB: #6E8CA0
+
+*.color0:               #323246
+*.color8:               #323246
+*.color1:               #5A7882
+*.color9:               #5A7882
+*.color2:               #8C8CA0
+*.color10:              #8C8CA0
+*.color3:               #1E828C
+*.color11:              #1E828C
+*.color4:               #3C788C
+*.color12:              #3C788C
+*.color5:               #6EA0B4
+*.color13:              #6EA0B4
+*.color6:               #6E8CA0
+*.color14:              #6E8CA0
+*.color7:               #96BEC8
+*.color15:              #96BEC8

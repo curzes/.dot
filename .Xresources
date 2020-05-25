@@ -1,0 +1,59 @@
+#include ".config/colors/pink"
+
+! Xft settings: Xtf.antialias: true 
+Xtf.autohint: false 
+Xft.hinting: true 
+Xft*hinting: Full 
+
+! Xft.hintstyle: hintfull 
+Xft.hintstyle: hintslight 
+Xtf.rgba: rgb 
+Xft.dpi: 96 
+Xft.lcdfilter: lcddefault 
+Xft.embolden: false 
+Xft.render: true 
+
+! STTerm ---
+! 0 - 255
+st.opacity: 100
+
+! UXTerm --- 
+URxvt*termName: xterm-256color 
+URxvt*eightBitInput: false 
+URxvt.vt100.renderFont: true 
+URxvt*locale: true 
+
+URxvt.scrollBar: false 
+URxvt.font: xft:Source Code Pro:size=10
+URxvt.boldFont: xft:Source Code Pro Black:size=10
+! URxvt.font: xft:PragmataPro:size=10
+! URxvt.boldFont: xft:PragmataPro Bold:size=10
+Xcursor.theme: ArchCursorTheme 
+! URxvt.letterSpace: -1 
+! URxvt.lineSpace: -10 
+URxvt.url-launcher: /usr/bin/luakit 
+URxvt.underlineURLs: True 
+
+! Xterm --- 
+XTerm.font: xft: Source Code Pro:size=8 
+XTerm*locale: true 
+Xterm*saveLines: 1024 
+xterm*borderWidth: 0 
+*selectToClipboard *VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) ! URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select 
+
+! Activate plugins
+URxvt.perl-lib: .config/urxvt/
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+
+! Url
+URxvt.url-select.launcher: /usr/bin/luakit
+URxvt.url-select.underline: true
+URxvt.keysym.C-u: perl:url-select:select_next
+
+! Select
+URxvt.keysym.C-s: perl:keyboard-select:search
+
+! Keypoard select copy/paste
+URxvt.keysym.C-c:   perl:clipboard:copy
+URxvt.keysym.C-v:   perl:clipboard:paste
+! URxvt.keysym.C-C-v: perl:clipboard:paste_escaped

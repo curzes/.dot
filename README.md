@@ -130,7 +130,7 @@ git pull origin master
 ## DWM
 
 ```
-curl http://tiny.cc/dwm-install | bash
+curl -L http://tiny.cc/dwm-install | bash
 
 ```
 Eller:

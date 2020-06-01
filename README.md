@@ -128,6 +128,12 @@ git pull origin master
 
 
 ## DWM
+
+```
+curl http://tiny.cc/dwm-install | bash
+
+```
+Eller:
 ```
 git clone git@github.com:curzes/dwm.git
 cd dwm

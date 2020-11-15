@@ -13,9 +13,9 @@ export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 
 #--- Use the first program that it detects in the array as the default app
-export BROWSER=firefox luakit
-export EDITOR=vim nano subl3
-export FILEMANAGER=nautilus ranger thunar dolphin
+export BROWSER=brave firefox luakit
+export EDITOR=vim nano code
+export FILEMANAGER=ranger nautilus thunar dolphin
 export IMAGEVIEWER=feh
 
 #--- Config Alias ---#
@@ -55,7 +55,7 @@ alias stream-yunalescaswe='livestreamer -p "mpv -fs" twitch.tv/yunalescaswe medi
 #--- Color Alias ---#
 alias ll='ls -lh --color=auto'
 alias la='ls -lha --color=auto'
-alias config='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto=auto'
 alias grep='grep --color=auto'

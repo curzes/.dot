@@ -13,7 +13,7 @@ xset fp rehash &
 
 # /usr/bin/dropbox &
 # feh --randomize --bg-scale ~/.config/wallpapers/blk/* &
-feh --bg-scale ~/.config/wallpapers/2.jpg
+feh --bg-scale ~/.config/wallpapers/4.jpg
 # conky &
 compton --config ~/.config/compton.conf -b &
 # Ta bort musen (sudo pacman -S unclutter)

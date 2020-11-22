@@ -3,6 +3,9 @@
 #
 [[ $- != *i* ]] && return
 
+#--- Activate vim mode with <Esc>
+set -o vi
+
 #--- Adds colors to MAN-pages
 export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
 export LESS_TERMCAP_md=$'\E[01;31m'             # begin bold

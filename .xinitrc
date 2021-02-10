@@ -1,4 +1,3 @@
-# Mergar configurationen från Xresources och stanger av lockscreen och annat skit
 xrdb -merge .Xresources &
 xrdb -q &
 xset -spms &
@@ -6,10 +5,6 @@ xset s noblank &
 xset -dpms s off &
 xsetroot -cursor_name left_ptr &
 xset r rate 300 50 & # Speed xrate up
-
-# Saker som har att gora med teckensnitt
-xset +fp ~/.config/fonts &
-xset fp rehash &
 
 # /usr/bin/dropbox &
 # feh --randomize --bg-scale ~/.config/wallpapers/blk/* &

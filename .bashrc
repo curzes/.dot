@@ -6,6 +6,8 @@
 #--- Activate vim mode with <Esc>
 set -o vi
 
+export PATH=$HOME/.config/bin:$PATH
+
 #--- Adds colors to MAN-pages
 export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
 export LESS_TERMCAP_md=$'\E[01;31m'             # begin bold

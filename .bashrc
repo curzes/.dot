@@ -17,6 +17,8 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 
+export PASSWORD_STORE_DIR=~/.config/pass
+
 #--- Use the first program that it detects in the array as the default app
 export BROWSER=brave firefox luakit
 export EDITOR=vim nano code

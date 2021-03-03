@@ -18,6 +18,7 @@ export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 
 export PASSWORD_STORE_DIR=~/.config/pass
+export ST='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi0wYWI5NmU3OS05ZDQxLTQ2MjYtYmM3NS1mODUyOGVhMjY5MmUiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTQ3OTc2Njd9.DEpy3nb3yWRt2VHiS7HWC0TM22AtMbfSKMuKm2Xrv8U'
 
 #--- Use the first program that it detects in the array as the default app
 export BROWSER=brave firefox luakit

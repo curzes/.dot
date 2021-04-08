@@ -18,7 +18,7 @@ export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 
 export PASSWORD_STORE_DIR=~/.config/pass
-export ST='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi0wYWI5NmU3OS05ZDQxLTQ2MjYtYmM3NS1mODUyOGVhMjY5MmUiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTQ3OTc2Njd9.DEpy3nb3yWRt2VHiS7HWC0TM22AtMbfSKMuKm2Xrv8U'
+export ST='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi1lNzI3ZjExZi1jYTM3LTRkOTktYmMxMC1jZTFmNGUyNzZhYzgiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTc2MzgzMTF9.ngeJSMY1wSLVw8YvhDkwSCS4pIADS5yedVb8KZPVHaY'
 
 #--- Use the first program that it detects in the array as the default app
 export BROWSER=brave firefox luakit
@@ -63,7 +63,7 @@ alias stream-yunalescaswe='livestreamer -p "mpv -fs" twitch.tv/yunalescaswe medi
 #--- Color Alias ---#
 alias ll='ls -lh --color=auto --group-directories-first'
 alias la='ls -lhA --color=auto --group-directories-first'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.config/.cfg/ --work-tree=$HOME'
 alias dir='dir -lh --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

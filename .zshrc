@@ -21,9 +21,9 @@ export PASSWORD_STORE_DIR=~/.config/pass
 export ST='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi1lNzI3ZjExZi1jYTM3LTRkOTktYmMxMC1jZTFmNGUyNzZhYzgiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTc2MzgzMTF9.ngeJSMY1wSLVw8YvhDkwSCS4pIADS5yedVb8KZPVHaY'
 
 #--- Use the first program that it detects in the array as the default app
-export BROWSER=brave firefox luakit
-export EDITOR=vim nano code
-export FILEMANAGER=ranger nautilus thunar dolphin
+export BROWSER=brave
+export EDITOR=vim code
+export FILEMANAGER=ranger
 export IMAGEVIEWER=feh
 
 #--- Config Alias ---#
@@ -90,7 +90,10 @@ if [ -f $HOME/.config/bash_include/lcd ]; then . $HOME/.config/bash_include/lcd;
 if [ -f $HOME/.config/bash_include/myip ]; then . $HOME/.config/bash_include/myip; fi
 
 # PS1
-source $HOME/.config/st/git-prompt.zsh
-
-PROMPT=" %T %~ "
-
+if [ -f $HOME/.config/st/git-prompt.sh ]; then
+    source $HOME/.config/st/git-prompt.sh;
+    setopt PROMPT_SUBST;
+    PS1='$(__git_ps1 "(%s)") %~ ';
+else
+    PS1=" %~ "
+fi

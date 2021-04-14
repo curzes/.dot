@@ -20,9 +20,8 @@ export HISTFILE="$HOME/.local/share/history"
 export XINITRC="$HOME/.config/x11/xinitrc"
 
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
-export WGETRC="$HOME/.config}/wget/wgetrc"
+export WGETRC="$HOME/.config/wget/wgetrc"
 export GNUPGHOME="$HOME/.local/share/gnupg"
-
 export PASSWORD_STORE_DIR="$HOME/.config/pass"
 export ELECTRUMDIR="$HOME/.local/share/electrum"
 

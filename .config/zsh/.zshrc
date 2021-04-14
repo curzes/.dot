@@ -27,6 +27,7 @@ alias cfg-xresources='$EDITOR $HOME/.Xresources'
 #--- System Alias ---#
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
+alias startx='startx $HOME/.config/x11/xinitrc'
 
 #--- Livestream Alias
 alias stream-claudi_bear='livestreamer -p "mpv -fs" twitch.tv/claudi_bear medium'

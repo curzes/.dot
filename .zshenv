@@ -16,15 +16,15 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export ZDOTDIR="$HOME/.config/zsh"
-export HISTFILE="$HOME/.local/share}/history"
+export HISTFILE="$HOME/.local/share/history"
 export XINITRC="$HOME/.config/x11/xinitrc"
 
-# export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
-# export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-# export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
+export WGETRC="$HOME/.config}/wget/wgetrc"
+export GNUPGHOME="$HOME/.local/share/gnupg"
 
 export PASSWORD_STORE_DIR="$HOME/.config/pass"
-export ELECTRUMDIR="$HOME/.local/share}/electrum"
+export ELECTRUMDIR="$HOME/.local/share/electrum"
 
 #--- Adds colors to MAN-pages
 export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking

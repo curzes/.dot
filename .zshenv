@@ -1,29 +1,30 @@
-
-# Adds `~/.local/bin` to $PATH
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+#!/bin/zsh
 
 unsetopt PROMPT_SP
 
+# Adds `~/.local/bin` to $PATH
+export PATH="$PATH:$HOME/.local/bin"
+
 #--- Use the first program that it detects in the array as the default app
-export BROWSER='brave'
-export EDITOR='vim code'
-export FILEMANAGER='ranger'
-export IMAGEVIEWER='feh'
+export BROWSER="brave"
+export EDITOR="vim code"
+export FILEMANAGER="ranger"
+export IMAGEVIEWER="feh"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export ZDOTDIR=~/.config}/zsh
-export HISTFILE=~/.local/share}/history
+export ZDOTDIR="$HOME/.config/zsh"
+export HISTFILE="$HOME/.local/share}/history"
+export XINITRC="$HOME/.config/x11/xinitrc"
 
-# export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 # export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 # export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 # export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 
-export PASSWORD_STORE_DIR=~/.config/pass
-export ELECTRUMDIR=~/.local/share}/electrum
+export PASSWORD_STORE_DIR="$HOME/.config/pass"
+export ELECTRUMDIR="$HOME/.local/share}/electrum"
 
 #--- Adds colors to MAN-pages
 export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
@@ -34,7 +35,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 
-export ST='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi1lNzI3ZjExZi1jYTM3LTRkOTktYmMxMC1jZTFmNGUyNzZhYzgiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTc2MzgzMTF9.ngeJSMY1wSLVw8YvhDkwSCS4pIADS5yedVb8KZPVHaY'
+export ST="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi1lNzI3ZjExZi1jYTM3LTRkOTktYmMxMC1jZTFmNGUyNzZhYzgiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTc2MzgzMTF9.ngeJSMY1wSLVw8YvhDkwSCS4pIADS5yedVb8KZPVHaY"
 
 # This is the list for lf icons:
 export LF_ICONS="di=📁:\

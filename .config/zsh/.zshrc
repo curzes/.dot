@@ -6,26 +6,6 @@
 #--- Activate vim mode with <Esc>
 set -o vi
 
-export PATH=$HOME/.config/bin:$PATH
-
-#--- Adds colors to MAN-pages
-export LESS_TERMCAP_mb=$'\E[01;31m'             # begin blinking
-export LESS_TERMCAP_md=$'\E[01;31m'             # begin bold
-export LESS_TERMCAP_me=$'\E[0m'                 # end mode
-export LESS_TERMCAP_se=$'\E[0m'                 # end standout-mode
-export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
-export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
-
-export PASSWORD_STORE_DIR=~/.config/pass
-export ST='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi1lNzI3ZjExZi1jYTM3LTRkOTktYmMxMC1jZTFmNGUyNzZhYzgiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MTc2MzgzMTF9.ngeJSMY1wSLVw8YvhDkwSCS4pIADS5yedVb8KZPVHaY'
-
-#--- Use the first program that it detects in the array as the default app
-export BROWSER=brave
-export EDITOR=vim code
-export FILEMANAGER=ranger
-export IMAGEVIEWER=feh
-
 #--- Config Alias ---#
 alias cfg-bash='$EDITOR $HOME/.bashrc'
 alias cfg-compton='$EDITOR $HOME/.config/compton.conf'

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+while read r; do
+    svtplay-dl -q 1000 -Q 1000 -f -S --cookies st=\"$ST\" "$r";
+    if [[ $? -eq 0 ]]; then
+        echo " Success" "The video is downloaded.";
+    else
+        echo " Fail" "The video could not be downloaded.";
+    fi
+
+done <$1
+echo " Done" "All videos in the file are downloaded.";
+# echo "" > $1;

@@ -1,1 +1,0 @@
-xclipFile(){ cat $1 | xclip -selection clipboard; }

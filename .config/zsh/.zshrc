@@ -4,7 +4,8 @@
 [[ $- != *i* ]] && return
 
 #--- Activate vim mode with <Esc>
-set -o vi
+# set -o vi
+unsetopt nomatch
 
 #--- Config Alias ---#
 alias cfg-bash='$EDITOR $HOME/.bashrc'
@@ -59,7 +60,7 @@ alias asciimpv='mpv -vo caca'
 # Functions
 if [ -f $HOME/.config/bash_include/theme_list ]; then . $HOME/.config/bash_include/theme_list; fi
 if [ -f $HOME/.config/bash_include/theme_set ]; then . $HOME/.config/bash_include/theme_set; fi
-if [ -f $HOME/.config/bash_include/y2mp3 ]; then . $HOME/.config/bash_include/y2mp3; fi
+# if [ -f $HOME/.config/bash_include/y2mp3 ]; then . $HOME/.config/bash_include/y2mp3; fi
 if [ -f $HOME/.config/bash_include/sp ]; then . $HOME/.config/bash_include/sp; fi
 if [ -f $HOME/.config/bash_include/extract_mp3 ]; then . $HOME/.config/bash_include/extract_mp3; fi
 if [ -f $HOME/.config/bash_include/pipe ]; then . $HOME/.config/bash_include/pipe; fi

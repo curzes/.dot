@@ -1,5 +1,0 @@
-theme-list(){
-    for f in ~/.config/colors/*; do
-        echo $f;
-    done
-}

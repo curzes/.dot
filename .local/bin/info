@@ -1,0 +1,36 @@
+#!/bin/sh
+WM=$(cat .xinitrc | awk 'END{print $2}')
+RESOLUTION=$(xdpyinfo | grep 'dimensions:' | awk '{printf "%s", $2}')
+SHELL=$(ps | awk 'NR==2{print $4}')
+PACKS=$(pacman -Q | awk 'BEGIN{i=0}{i++;}END{print i}')
+CPUPROC="$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage "%"}')";
+RAM=$(free -m | awk 'NR==2{printf "%s'MB' / %s'MB' (%.2f%)", $3,$2,$3*100/$2}')
+DISK=$(df -h | awk '$NF=="/"{printf "%d'GB' / %d'GB' (%s)", $3,$2,$5}')
+TERMINAL=$(env | grep COLORTERM | awk '{split($0,a,"="); print a[2]}')
+DATE=$(date +"%A %d %b, %Y")
+TIME=$(date +"%H:%M")
+VPN=$(wget -qO- http://ip-api.com/json)
+echo "$(clear)"
+echo " │ Packages: ....... $PACKS"
+echo " │ "
+echo " │ Resolution: ..... $RESOLUTION"
+echo " │ WM: ............. $WM"
+echo " │ Shell: .......... $SHELL"
+echo " │ CPU usage: ...... $CPUPROC"
+echo " │ RAM: ............ $RAM"
+echo " │ Disk: ........... $DISK"
+echo " │ "
+echo " │ Date: ........... $DATE"
+echo " │ Time: ........... $TIME"
+echo " │ "
+echo " │ City: ........... $(echo $VPN | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g' | awk 'NR==2 {print $2}')"
+echo " │ Country: ........ $(echo $VPN | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g' | awk 'NR==3 {print $2}')"
+echo " │ ISP: ............ $(echo $VPN | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g' | awk 'NR==5 {print $2}')"
+echo " │ Lat: ............ $(echo $VPN | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g' | awk 'NR==6 {print $2}')"
+echo " │ Lon: ............ $(echo $VPN | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g' | awk 'NR==7 {print $2}')"
+echo " │ IP: ............. $(echo $VPN | sed -e 's/[\"{}]//g' -e 's/:/ /g' -e 's/,/\n/g' | awk 'NR==9 {print $2}')"
+echo " ├─╼"
+echo " │ $(tput setaf 0)██$(tput setaf 1)██$(tput setaf 2)██$(tput setaf 3)██$(tput setaf 4)██$(tput setaf 5)██$(tput setaf 6)██$(tput setaf 7)██$(tput sgr 0)"
+echo " │ $(tput setaf 8)██$(tput setaf 9)██$(tput setaf 10)██$(tput setaf 11)██$(tput setaf 12)██$(tput setaf 13)██$(tput setaf 14)██$(tput setaf 15)██$(tput sgr 0) "
+echo " └─╼"
+

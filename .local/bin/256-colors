@@ -1,0 +1,15 @@
+#!/bin/sh
+for f in 38 48 ; do
+	for color in {0..256} ; do
+        	if [ ${color} -lt 10 ] ; then
+                        echo -en "\e[${f};5;${color}m 00${color}"
+                elif [ ${color} -lt 100 ] ; then
+                        echo -en "\e[${f};5;${color}m 0${color}"
+                else
+                        echo -en "\e[${f};5;${color}m ${color}"
+                fi
+                if [ $((($color + 1) % 10)) == 0 ] ; then
+                        echo
+                fi
+        done
+done

@@ -1,0 +1,12 @@
+sp(){
+    if [ -n "$1" ]; then
+        mv "$1" "$(echo $1|sed 's/[][\(\)]//g; s/ \+/_/g')";
+    else
+        for f in *; do
+            if [ "$f" != "${f//[ \(\)\[\]]/}" ]
+            then
+                mv "$f" "$(echo $f|sed 's/[][\(\)]//g; s/ \+/_/g')";
+            fi
+        done
+    fi
+}

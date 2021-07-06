@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 #--- Use the first program that it detects in the array as the default app
 export BROWSER="brave"
-export EDITOR="vim code"
+export EDITOR="nvim"
 export FILEMANAGER="ranger"
 export IMAGEVIEWER="feh"
 

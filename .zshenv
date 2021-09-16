@@ -34,7 +34,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'          # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'                 # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'             # begin underline
 
-export ST="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTo2ZTZkZjVlZi0wZmQ1LTQ3YWQtOTg4My02ZmU1ZDIzZmI1NTYiLCJqdGkiOiJ0b2tlbi04OGMwOWViNS0yNjc3LTQ2YWMtYWQwYy1mNTJkZWUwMDY5YzYiLCJhbm9ueW1vdXMiOnRydWUsImlhdCI6MTYzMTU2MDQxNn0.54RdsOMWMCVzIZUIYOyQ0z-XcCzgK1Y-7tppdXmt4lE"
+export ST="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVU0VSSUQ6ZHBsYXlzZTphNGVlOTEzOS1hNThmLTQ5MjgtYjMzZC0zZjk5YmM0OTk1NjUiLCJqdGkiOiJ0b2tlbi0xYWIzMWU1Yi0zNDdlLTRiZmMtODQwYi1hNDE4OTkzZThiZjEiLCJhbm9ueW1vdXMiOmZhbHNlLCJpYXQiOjE2MzE4MDYxMjZ9.R0NuSJivhuQ9A2YajqgbOzFZGnvT4tNk-xM4tEozmTo"
 
 # This is the list for lf icons:
 export LF_ICONS="\
